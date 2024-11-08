@@ -1,15 +1,18 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
+import posixpath
 import zipfile
 from datetime import datetime, timedelta
 from glob import glob
-from os import makedirs, path
+from os import makedirs
 from os.path import join, splitext, basename, abspath, expanduser, exists
 from time import perf_counter
 from typing import Union, List, Optional
 
+import colored_logging as cl
 import numpy as np
 import rasters
 from dateutil import parser
@@ -18,15 +21,13 @@ from matplotlib.colors import Colormap
 from rasters import Raster, RasterGeometry, RasterGrid
 from shapely import Polygon
 
-import logging
-
-import colored_logging as cl
-
 from .ECOSTRESS_granule import ECOSTRESSGranule
+from .write_XML_metadata import write_XML_metadata
 
 DEFAULT_JSON_INDENT = 2
 
 logger = logging.getLogger(__name__)
+
 
 class ECOSTRESSTiledGranule(ECOSTRESSGranule):
     _PRODUCT_NAME = None

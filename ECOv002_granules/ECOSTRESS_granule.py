@@ -10,8 +10,11 @@ import PIL
 from dateutil import parser
 from matplotlib import pyplot as plt
 from matplotlib.colors import Colormap
-from rasters import RasterGeometry, BBox, Point, Raster
+
 from shapely import Polygon
+
+import colored_logging as cl
+from rasters import RasterGeometry, BBox, Point, Raster
 
 from .timer import Timer
 
