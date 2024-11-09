@@ -7,4 +7,5 @@ from .L3TSEB import L3TSEB
 from .L3TSM import L3TSM
 from .L4TESI import L4TESI
 from .L4TWUE import L4TWUE
+from .granule import ECOSTRESSGranule
 from .open_granule import open_granule

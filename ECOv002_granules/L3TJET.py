@@ -47,6 +47,42 @@ class L3ETPTJPL:
         return display_string
 
     @property
+    def BESSinst(self) -> Raster:
+        return self.variable("BESSinst", cmap=ET_COLORMAP)
+
+    @property
+    def ETdaily(self) -> Raster:
+        return self.variable("ETdaily", cmap=ET_COLORMAP)
+    
+    @property
+    def MOD16inst(self) -> Raster:
+        return self.variable("MOD16inst", cmap=ET_COLORMAP)
+    
+    @property
+    def PTJPLSMinst(self) -> Raster:
+        return self.variable("PTJPLSMinst", cmap=ET_COLORMAP)
+    
+    @property
+    def PTJPLSMcanopy(self) -> Raster:
+        return self.variable("PTJPLSMcanopy", cmap=ET_COLORMAP)
+
+    @property
+    def PTJPLSMsoil(self) -> Raster:
+        return self.variable("PTJPLSMsoil", cmap=ET_COLORMAP)
+
+    @property
+    def PTJPLSMinterception(self) -> Raster:
+        return self.variable("PTJPLSMinterception", cmap=ET_COLORMAP)
+
+    @property
+    def STICinst(self) -> Raster:
+        return self.variable("STICinst", cmap=ET_COLORMAP)
+
+    @property
+    def STICcanopy(self) -> Raster:
+        return self.variable("STICcanopy", cmap=ET_COLORMAP)
+
+    @property
     def ETinst(self) -> Raster:
         return self.variable("ETinst", cmap=ET_COLORMAP)
 
