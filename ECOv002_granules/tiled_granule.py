@@ -38,6 +38,8 @@ class ECOSTRESSTiledGranule(ECOSTRESSGranule):
     _STANDARD_METADATA_GROUP = "StandardMetadata"
     _PRODUCT_METADATA_GROUP = "ProductMetadata"
 
+    VARIABLE_CMAPS = {}
+
     def __init__(
             self,
             product_location: str = None,
@@ -553,6 +555,9 @@ class ECOSTRESSTiledGranule(ECOSTRESSGranule):
         end_time = perf_counter()
         duration = end_time - start_time
         logger.info(f"finished reading {self.product} {variable} ({duration:0.2f}s)")
+
+        if cmap is None and cmap in self.VARIABLE_CMAPS:
+            cmap = self.VARIABLE_CMAPS[variable]
 
         if cmap is not None:
             print(f"assigning cmap: {cmap}")

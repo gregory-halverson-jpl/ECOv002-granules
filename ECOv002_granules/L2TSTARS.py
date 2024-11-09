@@ -3,17 +3,26 @@ from typing import Union
 
 from dateutil import parser
 
-from .colors import NDVI_COLORMAP
+from .colors import *
 from .granule import ECOSTRESSGranule
 from .tiled_granule import ECOSTRESSTiledGranule
 
 PRIMARY_VARIABLE = "NDVI"
 PREVIEW_CMAP = NDVI_COLORMAP
 
+VARIABLE_CMAPS = {
+    "NDVI": NDVI_COLORMAP,
+    "NDVI-UQ": "jet",
+    "albedo": ALBEDO_COLORMAP,
+    "albedo-UQ": "jet"
+}
+
 class L2STARSGranule(ECOSTRESSGranule):
     _PRODUCT_NAME = "L2T_STARS"
     _PRIMARY_VARIABLE = "NDVI"
     _GRANULE_PREVIEW_CMAP = PREVIEW_CMAP
+
+    VARIABLE_CMAPS = VARIABLE_CMAPS
 
     def __init__(self, product_filename: str):
         super(L2STARSGranule, self).__init__(product_filename=product_filename)
@@ -27,6 +36,7 @@ class L2STARSGranule(ECOSTRESSGranule):
     def NDVI(self):
         if self._NDVI is None:
             self._NDVI = self.variable("NDVI")
+            self._NDVI.cmap = NDVI_COLORMAP
 
         return self._NDVI
 
@@ -41,6 +51,7 @@ class L2STARSGranule(ECOSTRESSGranule):
     def albedo(self):
         if self._albedo is None:
             self._albedo = self.variable("albedo")
+            self._albedo.cmap = ALBEDO_COLORMAP
 
         return self._albedo
 
@@ -64,6 +75,8 @@ class L2TSTARS(ECOSTRESSTiledGranule, L2STARSGranule):
     _PRODUCT_NAME = "L2T_STARS"
     _PRIMARY_VARIABLE = PRIMARY_VARIABLE
     _GRANULE_PREVIEW_CMAP = PREVIEW_CMAP
+
+    VARIABLE_CMAPS = VARIABLE_CMAPS
 
     def __init__(
             self,

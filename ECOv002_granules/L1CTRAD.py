@@ -11,15 +11,14 @@ from os.path import exists, abspath, expanduser, dirname, join, basename, splite
 from typing import Union, List, Any
 
 import numpy as np
-import rasters as rt
-import colored_logging as cl
 
-from ECOv002_granules.tiled_granule import ECOSTRESSTiledGranule
-import he5py
+import rasters as rt
 import rasters
 from rasters import Raster, MultiRaster, RasterGeometry, RasterGrid, KDTree
+import colored_logging as cl
 
 from .granule import ECOSTRESSGranule
+from .tiled_granule import ECOSTRESSTiledGranule
 
 __author__ = "Gregory Halverson"
 
