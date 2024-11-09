@@ -4,8 +4,8 @@ from os.path import exists
 
 from rasters import Raster
 
-from .ECOSTRESS_colors import NDVI_COLORMAP, GPP_COLORMAP
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .colors import NDVI_COLORMAP, GPP_COLORMAP
+from .tiled_granule import ECOSTRESSTiledGranule
 
 GRANULE_PREVIEW_CMAP = NDVI_COLORMAP
 

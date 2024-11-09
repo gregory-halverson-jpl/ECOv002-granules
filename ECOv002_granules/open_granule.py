@@ -3,7 +3,7 @@ import logging
 
 import colored_logging as cl
 
-from .ECOSTRESS_granule import ECOSTRESSGranule
+from .granule import ECOSTRESSGranule
 from .L2TLSTE import L2TLSTE
 from .L2TSTARS import L2TSTARS
 from .L3TJET import L3TJET

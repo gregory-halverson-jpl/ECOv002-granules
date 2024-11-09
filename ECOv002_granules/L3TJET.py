@@ -4,8 +4,8 @@ from os.path import exists
 
 from rasters import Raster
 
-from .ECOSTRESS_colors import ET_COLORMAP
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .colors import ET_COLORMAP
+from .tiled_granule import ECOSTRESSTiledGranule
 
 GRANULE_PREVIEW_CMAP = ET_COLORMAP
 

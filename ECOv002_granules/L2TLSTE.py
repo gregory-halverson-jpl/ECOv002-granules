@@ -8,8 +8,8 @@ import numpy as np
 import rasters as rt
 from rasters import Raster
 
-from .ECOSTRESS_granule import ECOSTRESSGranule
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .granule import ECOSTRESSGranule
+from .tiled_granule import ECOSTRESSTiledGranule
 
 logger = logging.getLogger(__name__)
 

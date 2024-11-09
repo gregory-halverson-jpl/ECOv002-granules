@@ -21,7 +21,7 @@ from matplotlib.colors import Colormap
 from rasters import Raster, RasterGeometry, RasterGrid
 from shapely import Polygon
 
-from .ECOSTRESS_granule import ECOSTRESSGranule
+from .granule import ECOSTRESSGranule
 from .write_XML_metadata import write_XML_metadata
 
 DEFAULT_JSON_INDENT = 2
