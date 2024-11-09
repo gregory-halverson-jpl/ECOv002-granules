@@ -4,6 +4,7 @@ import logging
 import colored_logging as cl
 
 from .granule import ECOSTRESSGranule
+from .L1CTRAD import L1CTRAD
 from .L2TLSTE import L2TLSTE
 from .L2TSTARS import L2TSTARS
 from .L3TJET import L3TJET
@@ -22,7 +23,10 @@ def open_granule(
         **kwargs) -> ECOSTRESSGranule:
     filename_base = splitext(basename(filename))[0]
 
-    if filename_base.startswith("ECOv002_L2T_LSTE"):
+    if filename_base.startswith("ECOv002_L1CT_RED"):
+        logger.info(f"loading Collection 2 L1CT RAD: {cl.file(filename)}")
+        return L1CTRAD(filename, **kwargs)
+    elif filename_base.startswith("ECOv002_L2T_LSTE"):
         logger.info(f"loading Collection 2 L2T LSTE: {cl.file(filename)}")
         return L2TLSTE(filename, **kwargs)
     elif filename_base.startswith("ECOv002_L2T_STARS"):
