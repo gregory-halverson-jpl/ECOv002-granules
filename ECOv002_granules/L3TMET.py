@@ -1,4 +1,4 @@
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .tiled_granule import ECOSTRESSTiledGranule
 
 class L3TMET(ECOSTRESSTiledGranule):
     _PRIMARY_VARIABLE = "Ta"

@@ -3,9 +3,9 @@ from typing import Union
 
 from dateutil import parser
 
-from .ECOSTRESS_colors import NDVI_COLORMAP
-from .ECOSTRESS_granule import ECOSTRESSGranule
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .colors import NDVI_COLORMAP
+from .granule import ECOSTRESSGranule
+from .tiled_granule import ECOSTRESSTiledGranule
 
 PRIMARY_VARIABLE = "NDVI"
 PREVIEW_CMAP = NDVI_COLORMAP

@@ -1,6 +1,6 @@
 from rasters import Raster
 
-from .ECOSTRESS_tiled_granule import ECOSTRESSTiledGranule
+from .tiled_granule import ECOSTRESSTiledGranule
 
 class L3TSM(ECOSTRESSTiledGranule):
     _PRIMARY_VARIABLE = "SM"
