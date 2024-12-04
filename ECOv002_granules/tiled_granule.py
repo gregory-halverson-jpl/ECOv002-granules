@@ -450,6 +450,10 @@ class ECOSTRESSTiledGranule(ECOSTRESSGranule):
             return self.UTC_to_solar(self.time_UTC, self.geometry.centroid_latlon.x)
 
     @property
+    def hour_of_day(self) -> float:
+        return self.time_solar.hour + self.time_solar.minute / 60
+
+    @property
     def build(self) -> str:
         if self._build is not None:
             return self._build
