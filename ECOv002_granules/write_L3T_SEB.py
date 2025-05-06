@@ -10,7 +10,8 @@ from rasters import Raster
 import rasters as rt
 
 from .constants import L3T_SEB_SHORT_NAME, L3T_SEB_LONG_NAME
-from .colors import L3TSEB, WATER_COLORMAP, CLOUD_COLORMAP
+from .colors import WATER_COLORMAP, CLOUD_COLORMAP
+from .L3TSEB import L3TSEB
 
 logger = logging.getLogger(__name__)
 

@@ -10,7 +10,8 @@ from rasters import Raster
 import rasters as rt
 
 from .constants import L4T_ESI_SHORT_NAME, L4T_ESI_LONG_NAME
-from .colors import L4TESI, ET_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
+from .colors import ET_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
+from .L4TESI import L4TESI
 
 logger = logging.getLogger(__name__)
 
