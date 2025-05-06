@@ -9,9 +9,9 @@ import shutil
 import colored_logging as cl
 
 from rasters import Raster
-from ECOv002_granules import L3TJET, ET_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
 
 from .constants import L3T_JET_SHORT_NAME, L3T_JET_LONG_NAME
+from .colors import L3TJET, ET_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
 
 logger = logging.getLogger(__name__)
 
