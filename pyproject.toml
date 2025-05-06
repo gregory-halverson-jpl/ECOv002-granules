@@ -3,8 +3,8 @@ requires = ["setuptools>=60", "setuptools-scm>=8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ECOv002_granules"
-version = "1.0.3"
+name = "ECOv002-granules"
+version = "1.1.0"
 description = "ECOSTRESS Collection 2 Data Product Granule Encapsulation Classes"
 readme = "README.md"
 authors = [
@@ -35,7 +35,7 @@ dev = [
 ECOv002_granules = ["*.txt"]
 
 [project.urls]
-"Homepage" = "https://github.com/ECOSTRESS-Collection-2/ECOv002_granules"
+"Homepage" = "https://github.com/ECOSTRESS-Collection-2/ECOv002-granules"
 
 [tool.setuptools.packages.find]
 include = ["ECOv002_granules"]
