@@ -8,9 +8,10 @@ import colored_logging as cl
 
 from rasters import Raster
 import rasters as rt
-from ECOv002_granules import L4TWUE, GPP_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
 
 from .constants import L4T_WUE_SHORT_NAME, L4T_WUE_LONG_NAME
+from .colors import GPP_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
+from .L4TWUE import L4TWUE
 
 logger = logging.getLogger(__name__)
 

@@ -8,9 +8,10 @@ import colored_logging as cl
 
 from rasters import Raster
 import rasters as rt
-from ECOv002_granules import L3TSM, SM_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
 
 from .constants import L3T_SM_SHORT_NAME, L3T_SM_LONG_NAME
+from .colors import SM_COLORMAP, WATER_COLORMAP, CLOUD_COLORMAP
+from .L3TSM import L3TSM
 
 logger = logging.getLogger(__name__)
 
