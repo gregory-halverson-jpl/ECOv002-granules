@@ -74,6 +74,10 @@ class L2LSTEGranule(ECOSTRESSGranule):
         return self.ST_K - 273.15
 
     @property
+    def WST_C(self) -> Raster:
+        return rt.where(self.water, self.ST_C, np.nan)
+
+    @property
     def LST_err(self) -> Raster:
         if self._LST_err is None:
             self._LST_err = self.variable("LST_err")
