@@ -189,3 +189,7 @@ class L2TLSTE(ECOSTRESSTiledGranule, L2LSTEGranule):
     @property
     def elevation_km(self) -> Raster:
         return self.elevation_m / 1000
+    
+    @property
+    def WST_C(self) -> Raster:
+        return rt.where(self.water, self.ST_C, np.nan)
